@@ -11,9 +11,9 @@ Vue.use(Antd);
 
 Vue.config.productionTip = false;
 
-console.json = (...args) => {
-  console.log(...args.map(arg => JSON.stringify(arg, null, 2)));
-};
+// console.json = (...args) => {
+//   console.log(...args.map(arg => JSON.stringify(arg, null, 2)));
+// };
 
 new Vue({
   router,
