@@ -19,3 +19,7 @@ export function shuffle(array) {
 
   return array;
 }
+
+export function clone(obj) {
+  return JSON.parse(JSON.stringify(obj));
+}
