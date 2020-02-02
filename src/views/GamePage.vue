@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is the Game Page</h1>
+    <h1>Standard Minesweeper</h1>
     <game />
   </div>
 </template>

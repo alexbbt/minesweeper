@@ -1,9 +1,8 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/game">Game</router-link> |
-      <router-link to="/shuffled-game">Shuffled Game</router-link>
+      <router-link to="/">Standard Game</router-link> |
+      <router-link to="/shuffled">Shuffled Game</router-link>
     </div>
     <router-view/>
   </div>

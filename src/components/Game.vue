@@ -1,7 +1,7 @@
 <template>
   <div class="game">
-    <p>Mines Left {{mines - flagged}}</p>
-    <p>Time played {{time}}</p>
+    <p>Mines Left: {{mines - flagged}}</p>
+    <p>Time played: {{formattedTime}}</p>
     <table>
       <tr v-for="(row, y) in grid" v-bind:key="y">
         <td v-for="(square, x) in row" v-bind:key="x" @click="() => click(x, y)">
@@ -27,6 +27,8 @@
 </template>
 
 <script>
+import moment from 'moment';
+
 import Square from './Square.vue';
 import { shuffle } from '@/utils';
 
@@ -64,6 +66,11 @@ export default {
       state: RUNNING,
       RUNNING,
     };
+  },
+  computed: {
+    formattedTime() {
+      return moment.utc(moment.duration(this.time, 'seconds').asMilliseconds()).format('mm:ss');
+    },
   },
   mounted() {
     this.generate(this.x, this.y);
